@@ -6,7 +6,7 @@ echo.
 cargo build --release
 if errorlevel 1 (
   echo.
-  echo The build failed. Send Claude the messages above.
+  echo The build failed.
   pause
   exit /b 1
 )
