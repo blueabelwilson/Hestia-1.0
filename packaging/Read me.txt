@@ -21,5 +21,8 @@ Right-click anything for more options. Change everything in Settings
 UNINSTALL
 Double-click "Uninstall Hestia.bat".
 
+Project page, updates and source code:
+  https://github.com/blueabelwilson/Hestia-1.0
+
 Hestia is free software (GNU GPL v3 or later). Rectangle layouts and colour
 schemes are recreated from adi1090x's rofi themes: https://github.com/adi1090x/rofi

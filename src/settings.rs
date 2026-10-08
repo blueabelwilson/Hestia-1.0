@@ -1559,6 +1559,7 @@ impl SettingsApp {
                 ui.vertical(|ui| {
                     ui.label(RichText::new("Hestia").size(32.0).family(FontFamily::Name("bold".into())));
                     ui.label(RichText::new(format!("Version {}", env!("CARGO_PKG_VERSION"))).color(MUTED));
+                    ui.hyperlink_to("Project page, updates and source code", env!("CARGO_PKG_REPOSITORY"));
                 });
             });
             ui.label(

@@ -4,6 +4,8 @@ version = "1.0.0"
 edition = "2021"
 description = "A friendly, themeable rofi-style launcher for Windows"
 license = "GPL-3.0-or-later"
+repository = "https://github.com/blueabelwilson/Hestia-1.0"
+homepage = "https://github.com/blueabelwilson/Hestia-1.0"
 
 [dependencies]
 eframe = "0.29"
