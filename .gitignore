@@ -1,0 +1,10 @@
+# Build output
+/target
+/dist
+
+# Files from the local build helper
+*.log
+build.done
+*.request
+watch.bat
+build.bat

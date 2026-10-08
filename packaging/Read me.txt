@@ -1,0 +1,25 @@
+HESTIA
+A friendly, good-looking launcher for Windows.
+
+INSTALL
+1. Unzip this folder (right-click the zip > Extract All).
+2. Double-click "Install Hestia.bat".
+   If Windows says "Windows protected your PC", click "More info", then "Run anyway".
+   (Hestia is a free hobby project, so it isn't signed with a paid certificate.)
+3. A setup window opens. Pick a picture, colours and a shape. That's it!
+
+USING IT
+  Alt + Space        open the app launcher
+  Ctrl + Alt + W     switch windows
+  Ctrl + Alt + R     run a command
+  Ctrl + Alt + P     power menu (lock, sleep, restart, shut down)
+
+Type to search, click or press Enter to open, Esc to close.
+Right-click anything for more options. Change everything in Settings
+(right-click the Hestia icon near the clock).
+
+UNINSTALL
+Double-click "Uninstall Hestia.bat".
+
+Hestia is free software (GNU GPL v3 or later). Rectangle layouts and colour
+schemes are recreated from adi1090x's rofi themes: https://github.com/adi1090x/rofi

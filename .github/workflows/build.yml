@@ -1,0 +1,44 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build
+        run: cargo build --release
+
+      - name: Package
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force dist/Hestia | Out-Null
+          Copy-Item target/release/hestia.exe dist/Hestia/
+          Copy-Item packaging/* dist/Hestia/
+          Compress-Archive -Path dist/Hestia -DestinationPath dist/Hestia.zip -Force
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: Hestia
+          path: dist/Hestia.zip
+
+      # Pushing a tag like v1.0.0 publishes a GitHub Release with the zip attached.
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/Hestia.zip
+          generate_release_notes: true
